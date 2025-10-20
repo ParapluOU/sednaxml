@@ -12,7 +12,7 @@ public:
 	static inline const char * errname(int rc) {
 		switch (rc) {
 #define errcase(x) case x: return #x;
-		errcase(PCRE_ERROR_NOMATCH)		
+		errcase(PCRE_ERROR_NOMATCH)
 		errcase(PCRE_ERROR_NULL)
 		errcase(PCRE_ERROR_BADOPTION)
 		errcase(PCRE_ERROR_BADMAGIC)
@@ -28,7 +28,9 @@ public:
 		errcase(PCRE_ERROR_INTERNAL)
 		errcase(PCRE_ERROR_BADCOUNT)
 		default:
-			return "unknown error " + rc;
+			static char buf[64];
+			snprintf(buf, sizeof(buf), "unknown error %d", rc);
+			return buf;
 
 #undef errcase
 		}
