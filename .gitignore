@@ -1,0 +1,48 @@
+# Build directories
+bld/
+build/
+cmake-build-*/
+
+# Installation directories
+sedna_install/
+install/
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+*.lo
+*.la
+
+# Libraries
+*.lib
+*.a
+*.dylib
+*.so
+*.so.*
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE/Editor directories
+.vscode/
+.idea/
+*.sublime-*
+
+# Generated documentation
+html/
+latex/
