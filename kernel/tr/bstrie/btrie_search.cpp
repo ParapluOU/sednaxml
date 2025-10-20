@@ -220,7 +220,7 @@ static char * st_find_next_state(char * p, char ** k, size_t * klen, struct st_s
 
     s = state->dsc.p + state->dsc.len;
 
-    if ((i == state->dsc.prefix_len) && (klen > 0)) {
+    if ((i == state->dsc.prefix_len) && (*klen > 0)) {
         int offset = find_state_edge(**k, &(state->dsc), move_index);
         if (offset == -1) {
             return NULL;
